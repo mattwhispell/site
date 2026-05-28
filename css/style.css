@@ -361,19 +361,28 @@ section { padding-block: var(--section-gap); }
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  padding: 8px 0;
-  border-top: 1px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: calc(var(--radius) * 2);
+  background: rgba(255,255,255,0.04);
+  transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-.project-card__summary:hover,
+.project-card__summary:hover {
+  color: #fff;
+  background: rgba(186, 34, 24, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .project-card__details[open] .project-card__summary {
   color: var(--text);
+  background: rgba(255,255,255,0.06);
   border-color: var(--border);
 }
 
