@@ -285,5 +285,31 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const allDetails = document.querySelectorAll('.project-card__details');
+
+      allDetails.forEach(details => {
+        const card = details.closest('.project-card');
+        details.addEventListener('toggle', () => {
+          if (!card) return;
+
+          if (details.open) {
+            allDetails.forEach(other => {
+              if (other !== details) {
+                other.open = false;
+              }
+            });
+            card.classList.add('is-expanded');
+            window.requestAnimationFrame(() => {
+              card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          } else {
+            card.classList.remove('is-expanded');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
