@@ -36,7 +36,7 @@
       <div class="container">
 
         <div class="hero__eyebrow">
-          <span class="label">Electrical Engineering · Clarkson University · 2026</span>
+          <span class="label">Electrical Engineering · Clarkson University · 2028</span>
         </div>
 
         <h1 class="hero__name">
@@ -65,13 +65,12 @@
         <ul class="ticker__inner">
           <li class="ticker__item">Controls Theory</li>
           <li class="ticker__item">MATLAB / Simulink</li>
-          <li class="ticker__item">Embedded C</li>
-          <li class="ticker__item">PLC Programming</li>
           <li class="ticker__item">Motor Drives</li>
           <li class="ticker__item">EV Powertrain</li>
           <li class="ticker__item">PCB Design</li>
+          <li class="ticker__item">Embedded C</li>
+          <li class="ticker__item">C++</li>
           <li class="ticker__item">Python</li>
-          <li class="ticker__item">SCADA / HMI</li>
         </ul>
       </div>
     </div>
@@ -103,7 +102,16 @@
               <li class="tag">PID</li>
               <li class="tag">STM32</li>
             </ul>
-            <a href="#" class="project-card__link">View Details &rarr;</a>
+            <details class="project-card__details">
+              <summary class="project-card__summary">View Details &rarr;</summary>
+              <div class="project-card__detail-panel">
+                <p>Implemented the motor controller firmware with encoder feedback, feedforward compensation, and anti-windup. The system maintained stable speed under varying torque loads and reduced overshoot in live bench testing.</p>
+                <div class="project-card__gallery">
+                  <img src="images/motor-controller-1.jpg" alt="Motor controller electronics board">
+                  <img src="images/motor-controller-2.jpg" alt="Close-up of a brushed DC motor and encoder">
+                </div>
+              </div>
+            </details>
           </article>
 
           <!-- Card 2 -->
@@ -120,7 +128,16 @@
               <li class="tag">Simulink</li>
               <li class="tag">Thermal Modeling</li>
             </ul>
-            <a href="#" class="project-card__link">View Details &rarr;</a>
+            <details class="project-card__details">
+              <summary class="project-card__summary">View Details &rarr;</summary>
+              <div class="project-card__detail-panel">
+                <p>Created a multi-domain thermal model that tracked cell temperatures across charge/discharge cycles. I compared passive and active cooling to expose hot spots and quantify how design changes improved pack longevity.</p>
+                <div class="project-card__gallery">
+                  <img src="images/battery-model-1.jpg" alt="Thermal model analysis on a laptop screen">
+                  <img src="images/battery-model-2.jpg" alt="Battery pack simulation with temperature visualization">
+                </div>
+              </div>
+            </details>
           </article>
 
           <!-- Card 3 -->
@@ -138,7 +155,16 @@
               <li class="tag">VFD</li>
               <li class="tag">HMI</li>
             </ul>
-            <a href="#" class="project-card__link">View Details &rarr;</a>
+            <details class="project-card__details">
+              <summary class="project-card__summary">View Details &rarr;</summary>
+              <div class="project-card__detail-panel">
+                <p>Developed logic to sequence conveyor stations, manage material flow, and support fault recovery. The implementation included safety interlocks, sensor-driven step sequencing, and an operator HMI that simplified machine status checks.</p>
+                <div class="project-card__gallery">
+                  <img src="images/plc-automation-1.jpg" alt="Industrial automation conveyor system">
+                  <img src="images/plc-automation-2.jpg" alt="Control panel touchscreen interface">
+                </div>
+              </div>
+            </details>
           </article>
 
           <!-- Card 4 — placeholder -->
@@ -152,6 +178,16 @@
             <ul class="project-card__tags">
               <li class="tag">Coming Soon</li>
             </ul>
+            <details class="project-card__details">
+              <summary class="project-card__summary">View Details &rarr;</summary>
+              <div class="project-card__detail-panel">
+                <p>This placeholder is ready to become a new project showcase. Add two images, a concise summary of the outcome, and the key technical highlights when you have the next story to share.</p>
+                <div class="project-card__gallery">
+                  <img src="images/placeholder-1.jpg" alt="Engineering project planning and notebook">
+                  <img src="images/placeholder-2.jpg" alt="Technical concept sketch and prototype materials">
+                </div>
+              </div>
+            </details>
           </article>
 
         </div>
@@ -170,7 +206,7 @@
             <br>
             <p>
               I'm a third-year Electrical Engineering student at Clarkson University in Potsdam, NY.
-              My coursework centres on control systems and power electronics, and I spend a lot of
+              My coursework focuses on control systems and power electronics, and I spend a lot of
               time outside class poking at motor drives and writing embedded firmware.
             </p>
             <p>
@@ -196,7 +232,7 @@
               </div>
               <div class="detail-row">
                 <dt>Year</dt>
-                <dd>Third Year (Class of 2026)</dd>
+                <dd>Third Year (Class of 2028)</dd>
               </div>
               <div class="detail-row">
                 <dt>Focus</dt>

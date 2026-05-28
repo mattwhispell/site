@@ -339,6 +339,68 @@ section { padding-block: var(--section-gap); }
 
 .project-card:hover .project-card__link { gap: 10px; }
 
+.project-card__details {
+  margin-block-start: 12px;
+}
+
+.project-card__summary {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 8px 0;
+  border-top: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-card__summary:hover,
+.project-card__details[open] .project-card__summary {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.project-card__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-card__detail-panel {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 20px;
+}
+
+.project-card__detail-panel p {
+  color: var(--text-sub);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-block-end: 0;
+}
+
+.project-card__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card__gallery img {
+  width: 100%;
+  min-height: 150px;
+  object-fit: cover;
+  border-radius: calc(var(--radius) * 1.5);
+  background: #111;
+}
+
+.project-card__details[open] .project-card__summary {
+  gap: 8px;
+}
+
 /* ── About split ─────────────────────────────────────────── */
 .about-grid {
   display: grid;
@@ -438,4 +500,8 @@ section { padding-block: var(--section-gap); }
 @media (max-width: 480px) {
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .hero__actions .btn { width: 100%; justify-content: center; }
+
+  .project-card__gallery {
+    grid-template-columns: 1fr;
+  }
 }
