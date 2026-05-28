@@ -91,24 +91,25 @@
           <!-- Card 1 -->
           <article class="project-card">
             <span class="project-card__num">01</span>
-            <h3 class="project-card__title">Closed-Loop DC Motor Speed Controller</h3>
+            <h3 class="project-card__title">3D Printer Design and Build</h3>
             <p class="project-card__desc">
-              Designed and implemented a PID speed controller for a brushed DC motor using an STM32
-              microcontroller. Tuned gains via Ziegler–Nichols and validated steady-state error
-              within ±0.5 RPM across load variations.
+              Designed and built a coreXY 3D printer running on Klipper firmware that rivals the performance of top-level consumer models. 
             </p>
             <ul class="project-card__tags">
-              <li class="tag">Embedded C</li>
-              <li class="tag">PID</li>
-              <li class="tag">STM32</li>
+              <li class="tag">Embedded Systems</li>
+              <li class="tag">Python</li>
+              <li class="tag">Controls</li>
             </ul>
             <details class="project-card__details">
               <summary class="project-card__summary">View Details &rarr;</summary>
               <div class="project-card__detail-panel">
-                <p>Implemented the motor controller firmware with encoder feedback, feedforward compensation, and anti-windup. The system maintained stable speed under varying torque loads and reduced overshoot in live bench testing.</p>
+                <p>This printer serves as a customizable platform for testing 3D printer performance improvements.
+                  Implemented an ADXL345 accelerometer-based input shaping algorithm which avoids resonance peaks to reduce print artifacts and improve surface finish at high speeds. 
+                  Analyzed power consumption and thermal performance of the stepper drivers under various print loads, optimizing cooling to maintain consistent performance during long prints.
+               </p>
                 <div class="project-card__gallery">
-                  <img src="images/motor-controller-1.jpg" alt="Motor controller electronics board">
-                  <img src="images/motor-controller-2.jpg" alt="Close-up of a brushed DC motor and encoder">
+                  <img src="images/PrinterCAD.jpeg" alt="3D printer CAD design">
+                  <img src="images/PrinterReal.jpeg" alt="3D printer assembly">
                 </div>
               </div>
             </details>
