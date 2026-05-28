@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Matt Whispell — Electrical Engineering student at Clarkson University, focused on controls, automation, and electric vehicles." />
+  <title>Matt Whispell — EE @ Clarkson</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">M<span>.</span>W</a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────────────── -->
+    <section class="hero" id="top">
+      <div class="container">
+
+        <div class="hero__eyebrow">
+          <span class="label">Electrical Engineering · Clarkson University · 2026</span>
+        </div>
+
+        <h1 class="hero__name">
+          Matt<br><em>Whispell</em>
+        </h1>
+
+        <p class="hero__bio">
+          Third-year EE student with a focus on
+          <strong>controls systems</strong>, <strong>industrial automation</strong>,
+          and <strong>electric vehicle powertrains</strong>. I build things that
+          move, sense, and self-correct — from motor controllers to feedback loops
+          that keep systems exactly where they need to be.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects &rarr;</a>
+          <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Ticker ─────────────────────────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="container">
+        <ul class="ticker__inner">
+          <li class="ticker__item">Controls Theory</li>
+          <li class="ticker__item">MATLAB / Simulink</li>
+          <li class="ticker__item">Embedded C</li>
+          <li class="ticker__item">PLC Programming</li>
+          <li class="ticker__item">Motor Drives</li>
+          <li class="ticker__item">EV Powertrain</li>
+          <li class="ticker__item">PCB Design</li>
+          <li class="ticker__item">Python</li>
+          <li class="ticker__item">SCADA / HMI</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Projects ──────────────────────────────────────── -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <div>
+            <p class="label">Selected Work</p>
+            <h2>Projects</h2>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Card 1 -->
+          <article class="project-card">
+            <span class="project-card__num">01</span>
+            <h3 class="project-card__title">Closed-Loop DC Motor Speed Controller</h3>
+            <p class="project-card__desc">
+              Designed and implemented a PID speed controller for a brushed DC motor using an STM32
+              microcontroller. Tuned gains via Ziegler–Nichols and validated steady-state error
+              within ±0.5 RPM across load variations.
+            </p>
+            <ul class="project-card__tags">
+              <li class="tag">Embedded C</li>
+              <li class="tag">PID</li>
+              <li class="tag">STM32</li>
+            </ul>
+            <a href="#" class="project-card__link">View Details &rarr;</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card">
+            <span class="project-card__num">02</span>
+            <h3 class="project-card__title">EV Battery Pack Thermal Model</h3>
+            <p class="project-card__desc">
+              Built a Simulink thermal simulation for a lithium-ion battery pack under drive-cycle
+              loading. Compared passive vs. active cooling strategies and plotted cell temperature
+              distributions against SAE J2288 profiles.
+            </p>
+            <ul class="project-card__tags">
+              <li class="tag">MATLAB</li>
+              <li class="tag">Simulink</li>
+              <li class="tag">Thermal Modeling</li>
+            </ul>
+            <a href="#" class="project-card__link">View Details &rarr;</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card">
+            <span class="project-card__num">03</span>
+            <h3 class="project-card__title">Conveyor Line PLC Automation</h3>
+            <p class="project-card__desc">
+              Programmed ladder logic for a three-station sorting conveyor using Allen-Bradley
+              MicroLogix 1100. Integrated photoelectric sensors, VFD speed control, and a basic
+              HMI touchscreen for operator monitoring.
+            </p>
+            <ul class="project-card__tags">
+              <li class="tag">PLC</li>
+              <li class="tag">Ladder Logic</li>
+              <li class="tag">VFD</li>
+              <li class="tag">HMI</li>
+            </ul>
+            <a href="#" class="project-card__link">View Details &rarr;</a>
+          </article>
+
+          <!-- Card 4 — placeholder -->
+          <article class="project-card">
+            <span class="project-card__num">04</span>
+            <h3 class="project-card__title">Your Next Project</h3>
+            <p class="project-card__desc">
+              Slot reserved for what you're working on next. Add a card by duplicating this block
+              in <code>index.html</code> and updating the content.
+            </p>
+            <ul class="project-card__tags">
+              <li class="tag">Coming Soon</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────── -->
+    <section id="about">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-text">
+            <p class="label" style="margin-block-end:16px;">About Me</p>
+            <h2>Engineer,<br>problem-solver,<br>tinkerer.</h2>
+            <br>
+            <p>
+              I'm a third-year Electrical Engineering student at Clarkson University in Potsdam, NY.
+              My coursework centres on control systems and power electronics, and I spend a lot of
+              time outside class poking at motor drives and writing embedded firmware.
+            </p>
+            <p>
+              My longer-term interest is in making electric vehicles smarter — better thermal
+              management, tighter torque control, and the kind of real-time feedback loops that
+              separate good EVs from great ones.
+            </p>
+            <p>
+              When I'm not in the lab I'm probably hiking the Adirondacks or taking something apart
+              to see how it works.
+            </p>
+          </div>
+
+          <div class="about-details">
+            <dl>
+              <div class="detail-row">
+                <dt>University</dt>
+                <dd>Clarkson University</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Degree</dt>
+                <dd>B.S. Electrical Engineering</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Year</dt>
+                <dd>Third Year (Class of 2026)</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Focus</dt>
+                <dd>Controls &amp; Automation</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Interests</dt>
+                <dd>Electric Vehicles, Embedded Systems, Power Electronics</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Tools</dt>
+                <dd>MATLAB, Simulink, KiCad, STM32CubeIDE, RSLogix</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Location</dt>
+                <dd>Potsdam, NY</dd>
+              </div>
+            </dl>
+
+            <br>
+            <a href="resume.pdf" class="btn btn--ghost" download>Download Résumé &darr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────── -->
+    <div class="contact-band" id="contact">
+      <div class="container">
+        <p class="label" style="margin-block-end:20px;">Get in Touch</p>
+        <h2>Let's work<br>together.</h2>
+        <p>Open to internships, research opportunities, and interesting problems.</p>
+        <a href="mailto:whispemj@clarkson.edu" class="btn btn--primary">whispemj@clarkson.edu</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025 Matt Whispell</span>
+      <nav aria-label="Social links">
+        <ul class="footer__links">
+          <li><a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/"      target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
