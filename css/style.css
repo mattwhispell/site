@@ -152,10 +152,26 @@ section { padding-block: var(--section-gap); }
   background: var(--accent);
 }
 
+.hero__name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
 .hero__name {
   font-size: clamp(52px, 8vw, 108px);
-  margin-block-end: 32px;
+  margin-block-end: 0;
   max-width: 14ch;
+}
+
+.hero__portrait {
+  width: 160px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: calc(var(--radius) * 3);
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 .hero__name em {
