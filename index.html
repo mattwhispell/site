@@ -93,7 +93,9 @@
             <span class="project-card__num">01</span>
             <h3 class="project-card__title">3D Printer Design and Build</h3>
             <p class="project-card__desc">
-              Designed and built a coreXY 3D printer running on Klipper firmware that rivals the performance of top-level consumer models. 
+              Designed and built a coreXY 3D printer running on Klipper firmware that rivals the performance of top-level consumer models at less than half the price. 
+              This printer serves as a customizable platform for testing 3D printer performance improvements.
+
             </p>
             <ul class="project-card__tags">
               <li class="tag">Embedded Systems</li>
@@ -103,9 +105,10 @@
             <details class="project-card__details">
               <summary class="project-card__summary">View Details &rarr;</summary>
               <div class="project-card__detail-panel">
-                <p>This printer serves as a customizable platform for testing 3D printer performance improvements.
-                  Implemented an ADXL345 accelerometer-based input shaping algorithm which avoids resonance peaks to reduce print artifacts and improve surface finish at high speeds. 
-                  Analyzed power consumption and thermal performance of the stepper drivers under various print loads, optimizing cooling to maintain consistent performance during long prints.
+                <p>
+                  I implemented an ADXL345 accelerometer-based input shaping algorithm which avoids resonance peaks to reduce print artifacts and improve surface finish at high speeds. 
+                  The printer platform was also useful to analyze power consumption and thermal performance of the stepper drivers under various print loads, optimizing cooling to maintain consistent performance during long prints.
+                  To support high speed printer development, I designed a low cost CPAP cooling assembly using custom 3D printed parts to provide superior part cooling performance at high print speeds (orange 3D prints and gray vacuum hose in the image).
                </p>
                 <div class="project-card__gallery">
                   <img src="images/PrinterCAD.jpeg" alt="3D printer CAD design">
@@ -118,24 +121,27 @@
           <!-- Card 2 -->
           <article class="project-card">
             <span class="project-card__num">02</span>
-            <h3 class="project-card__title">EV Battery Pack Thermal Model</h3>
+            <h3 class="project-card__title">Electrochemical Sensor Research</h3>
             <p class="project-card__desc">
-              Built a Simulink thermal simulation for a lithium-ion battery pack under drive-cycle
-              loading. Compared passive vs. active cooling strategies and plotted cell temperature
-              distributions against SAE J2288 profiles.
+              I'm currently working on a research project continuing development of an electrochemical sensor which matches the performance of commercial electrochemical sensors at a fraction of the cost using the LMP91000 IC.
+              This sensor also implements bluetooth connectivity and a custom smartphone app to provide real-time feedback on sensor readings, which is a unique feature for this type of low-cost sensor.
             </p>
             <ul class="project-card__tags">
-              <li class="tag">MATLAB</li>
-              <li class="tag">Simulink</li>
-              <li class="tag">Thermal Modeling</li>
+              <li class="tag">Simplicity Studio</li>
+              <li class="tag">C, C++</li>
+              <li class="tag">Electrochemistry</li>
+              <li class="tag">EFR32</li>
             </ul>
             <details class="project-card__details">
               <summary class="project-card__summary">View Details &rarr;</summary>
               <div class="project-card__detail-panel">
-                <p>Created a multi-domain thermal model that tracked cell temperatures across charge/discharge cycles. I compared passive and active cooling to expose hot spots and quantify how design changes improved pack longevity.</p>
+                <p>Currently this sensor supports chronoamperometry, cyclic voltammetry, square wave voltammetry, and differential pulse voltammetry, but I plan to work with the chemistry team to expand its electrochemical experiment capabilities. 
+                  Along with this, I hope to work on the PCB design and use an electromagnetic simulation software to implement an on board trace antenna to improve bluetooth performance, and to analyze effects of EMI on the experiment results. 
+                  We will work to finalize the design and begin looking into applications for the sensor such as glucose monitoring and environmental sensing, and I hope to publish our results in a journal paper by the end of the year.
+                </p>
                 <div class="project-card__gallery">
-                  <img src="images/battery-model-1.jpg" alt="Thermal model analysis on a laptop screen">
-                  <img src="images/battery-model-2.jpg" alt="Battery pack simulation with temperature visualization">
+                  <img src="images/electrochemical-sensor.jpg" alt="Electrochemical sensor custom PCB">
+                  <img src="images/LMP91000App.jpg" alt="Custom smartphone app showing real-time sensor data">
                 </div>
               </div>
             </details>
@@ -208,7 +214,7 @@
             <p>
               I'm a third-year Electrical Engineering student at Clarkson University in Potsdam, NY.
               My coursework focuses on control systems and power electronics, and I spend a lot of
-              time outside class poking at motor drives and writing embedded firmware.
+              time outside class working on the Formula Electric team and circuit design projects.
             </p>
             <p>
               My longer-term interest is in making electric vehicles smarter — better thermal
@@ -254,7 +260,7 @@
             </dl>
 
             <br>
-            <a href="resume.pdf" class="btn btn--ghost" download>Download Résumé &darr;</a>
+            <a href="MattWhispellElectricalEngineerResume.pdf" class="btn btn--ghost" download>Download Résumé &darr;</a>
           </div>
 
         </div>
