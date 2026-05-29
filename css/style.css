@@ -379,25 +379,25 @@ section { padding-block: var(--section-gap); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   color: var(--accent);
-  border-radius: 50%;
+  border-radius: calc(var(--radius) * 2);
   background: rgba(255,255,255,0.04);
   border: 1px solid transparent;
   text-decoration: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(6px);
-  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-}
-
-.project-card__details[open] .project-card__github-link {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
-  background: rgba(255,255,255,0.08);
+  transition: opacity 0.16s ease, transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+  margin-left: 12px;
+}
+
+.project-card__github-link:hover {
+  background: rgba(186,34,24,0.14);
   border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .project-card__summary:hover {
