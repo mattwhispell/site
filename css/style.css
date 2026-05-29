@@ -154,8 +154,8 @@ section { padding-block: var(--section-gap); }
 
 .hero__name-wrap {
   display: flex;
-  align-items: center;
-  gap: 28px;
+  align-items: flex-start;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
@@ -166,12 +166,12 @@ section { padding-block: var(--section-gap); }
 }
 
 .hero__portrait {
-  width: 160px;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
+  width: auto;
+  height: clamp(100px, 16vw, 132px);
   object-fit: cover;
   border-radius: calc(var(--radius) * 3);
   border: 1px solid rgba(255,255,255,0.12);
+  align-self: flex-start;
 }
 
 .hero__name em {
