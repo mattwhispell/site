@@ -92,9 +92,18 @@ section { padding-block: var(--section-gap); }
 }
 
 .nav__logo {
-  font-family: var(--font-display);
-  font-size: 20px;
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav__logo:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .nav__logo span { color: var(--accent); }
