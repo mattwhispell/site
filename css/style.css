@@ -1043,3 +1043,33 @@ section { padding-block: var(--section-gap); }
     width: calc(100% - 24px);
   }
 }
+
+/* ── Mobile Centering Fix ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  
+  /* 1. Force the name-wrapper to center its contents */
+  .hero .name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+  }
+
+  /* 2. Center the eyebrow text and its accent line */
+  .hero__eyebrow {
+    justify-content: center;
+  }
+
+  /* 3. Center the bio (margin-inline: auto centers it because it has a max-width) */
+  .hero__bio {
+    text-align: center;
+    margin-inline: auto; 
+  }
+
+  /* 4. Center the buttons and social links */
+  .hero__actions,
+  .hero-social {
+    justify-content: center;
+  }
+}
