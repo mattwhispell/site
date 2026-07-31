@@ -1,0 +1,4 @@
+# Claude Code AI files
+.claude/
+.agents/
+skills-lock.json
