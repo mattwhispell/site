@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Electrochemical Sensor Research Project by Matt Whispell" />
+  <title>Electrochemical Sensor Research — Matt Whispell</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Return home">
+        <img src="/favicon.svg" alt="Matt Whispell" style="width: 40px; height: 40px;">
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Project Hero ──────────────────────────────────────── -->
+    <section class="project-hero fade-in-up">
+      <div class="container project-hero__inner">
+        <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+        
+        <div class="project-header">
+          <p class="label">Research</p>
+          <h1 class="project-title">Electrochemical Sensor Research</h1>
+          <p class="project-lead">
+            Developing a low-cost electrochemical sensor using the LMP91000 IC with Bluetooth connectivity that matches commercial performance.
+          </p>
+          
+          <ul class="project-card__tags">
+            <li class="tag">Simplicity Studio</li>
+            <li class="tag">C, C++</li>
+            <li class="tag">Electrochemistry</li>
+            <li class="tag">EFR32</li>
+          </ul>
+          
+          <div class="project-links mt-4">
+            <a class="btn btn--primary" href="https://github.com/sigmondkukla/lmp91000" target="_blank" rel="noopener">
+              View on GitHub &nearr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Project Content ────────────────────────────────────── -->
+    <section class="project-content fade-in-up delay-1">
+      <div class="container">
+        
+        <!-- Video Showcase -->
+        <div class="project-media-full">
+          <video class="project-video" controls autoplay muted loop playsinline>
+            <source src="../1minElectrochemicalSensorVideo.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="media-caption">1-minute overview of the electrochemical sensor in action.</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-text">
+            <h2>Overview & Capabilities</h2>
+            <p>
+              I am currently working on a research project continuing the development of an electrochemical sensor. 
+              The goal is to match the performance of commercial electrochemical sensors at a fraction of the cost, utilizing the highly integrated LMP91000 IC.
+            </p>
+            <p>
+              Currently, this sensor supports chronoamperometry, cyclic voltammetry, square wave voltammetry, and differential pulse voltammetry. I plan to collaborate with the chemistry team to further expand its electrochemical experiment capabilities.
+            </p>
+            
+            <h2>Wireless Integration</h2>
+            <p>
+              A standout feature of this low-cost sensor is its Bluetooth connectivity, paired with a custom smartphone app. This setup provides real-time feedback and visualization of sensor readings, making field testing and data collection incredibly efficient.
+            </p>
+            
+            <h2>Future Work</h2>
+            <p>
+              I hope to iterate on the PCB design, utilizing electromagnetic simulation software to implement an on-board trace antenna. This will significantly improve Bluetooth performance and allow us to analyze the effects of EMI on experiment results.
+            </p>
+            <p>
+              We will work to finalize the design and begin investigating practical applications such as glucose monitoring and environmental sensing. I aim to publish our results in a journal paper by the end of the year.
+            </p>
+          </div>
+
+          <div class="project-gallery-stack">
+            <figure class="gallery-item">
+              <img src="../images/ElectrochemicalSensor.jpg" alt="Electrochemical sensor custom PCB" loading="lazy">
+              <figcaption>Electrochemical sensor custom PCB</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="../images/LMP91000App.jpg" alt="Custom smartphone app showing real-time sensor data" loading="lazy">
+              <figcaption>Custom smartphone app showing real-time data</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Research Papers & Posters -->
+        <div class="project-documents mt-5">
+          <h2>Research Documentation</h2>
+          <p>Below you can view the detailed research paper and the final research poster.</p>
+          
+          <div class="document-viewer">
+            <h3>Research Poster</h3>
+            <object data="../Electrochemical%20Sensor%20Research%20Poster%20FINAL.pdf" type="application/pdf" width="100%" height="800px" class="pdf-object">
+              <p>It appears you don't have a PDF plugin for this browser. <a href="../Electrochemical%20Sensor%20Research%20Poster%20FINAL.pdf">Click here to download the poster.</a></p>
+            </object>
+          </div>
+
+          <div class="document-viewer mt-4">
+            <h3>Research Paper</h3>
+            <object data="../Electrochemical_Sensor_Research_Matt.pdf" type="application/pdf" width="100%" height="800px" class="pdf-object">
+              <p>It appears you don't have a PDF plugin for this browser. <a href="../Electrochemical_Sensor_Research_Matt.pdf">Click here to download the paper.</a></p>
+            </object>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025 Matt Whispell</span>
+      <nav aria-label="Social links">
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/matthewwhispell/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/mattwhispell" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

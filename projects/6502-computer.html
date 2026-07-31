@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="6502 Computer Architecture Project by Matt Whispell" />
+  <title>6502 CPU Computer — Matt Whispell</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Return home">
+        <img src="/favicon.svg" alt="Matt Whispell" style="width: 40px; height: 40px;">
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero fade-in-up">
+      <div class="container project-hero__inner">
+        <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+        
+        <div class="project-header">
+          <p class="label">Computer Engineering</p>
+          <h1 class="project-title">6502 CPU Computer</h1>
+          <p class="project-lead">
+            Implementing a 6502 CPU-based computer from the ground up, exploring computer architecture and assembly language.
+          </p>
+          
+          <ul class="project-card__tags">
+            <li class="tag">Coming Soon</li>
+            <li class="tag">Computer Engineering</li>
+            <li class="tag">Computer Architecture</li>
+            <li class="tag">Assembly Language</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content fade-in-up delay-1">
+      <div class="container">
+        <div class="project-grid">
+          <div class="project-text">
+            <h2>Ground-Up Architecture</h2>
+            <p>
+              I am working on a project implementing a 6502 CPU-based computer from the ground up. Eventually, I plan to work my way up to running Wozmon and even MSBasic on this custom computer, but for now, it's still in the early stages of development.
+            </p>
+            <p>
+              This project serves as a deep dive into fundamental computer architecture, memory mapping, and low-level assembly language.
+            </p>
+            
+            <h2>Custom Tooling</h2>
+            <p>
+              Because this project is built from scratch, I have designed a custom EEPROM programmer to upload machine code directly to the ROM chips. 
+              Additionally, I built a custom clock circuit using 555 timers to generate an adjustable clock signal. This allows me to step through the CPU cycles slowly for deep debugging and validation.
+            </p>
+          </div>
+
+          <div class="project-gallery-stack">
+            <figure class="gallery-item">
+              <img src="../images/EEPROMProgrammer.jpeg" alt="EEPROM programmer for writing machine code to the EEPROM chip" loading="lazy">
+              <figcaption>EEPROM programmer for writing machine code</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="../images/ClockCircuit.jpeg" alt="Custom clock circuit using 555 timers" loading="lazy">
+              <figcaption>Custom clock circuit using 555 timers</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025 Matt Whispell</span>
+      <nav aria-label="Social links">
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/matthewwhispell/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/mattwhispell" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

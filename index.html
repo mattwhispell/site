@@ -22,8 +22,11 @@
       <a href="#top" class="nav__logo" aria-label="Return to top">
         <img src="/favicon.svg" alt="Matt Whispell" style="width: 40px; height: 40px;">
       </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-icon"></span>
+      </button>
       <nav aria-label="Primary">
-        <ul class="nav__links">
+        <ul class="nav__links" id="nav-links">
           <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -36,34 +39,40 @@
 
     <!-- ── Hero ──────────────────────────────────────────── -->
     <section class="hero" id="top">
-      <div class="container">
-
-        <div class="hero__eyebrow">
-          <span class="label">Electrical Engineering · Clarkson University · 2028</span>
+        <div class="container">
+          <div class="hero__eyebrow">
+            <span class="label">Electrical Engineering · Clarkson University · 2028</span>
+          </div>
+          <div class="hero__name-wrap">
+            <h1 class="hero__name">
+              Matt<br><em>Whispell</em>
+            </h1>
+            <img class="hero__portrait" src="images/Portrait.jpg" alt="Portrait of Matt Whispell">
+          </div>
+          <p class="hero__bio">
+            Third-year EE student with a focus on
+            <strong>controls systems</strong>, <strong>automation</strong>,
+            and <strong>electric vehicle powertrains</strong>. I build things that
+            move, sense, and self-correct — from motor controllers to feedback loops
+            that keep systems exactly where they need to be.
+          </p>
+          <!-- Social icons row -->
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/matthewwhispell/" class="hero-social__link" aria-label="Connect on LinkedIn" target="_blank" rel="noopener">
+              <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.07c.66-1.25 2.28-2.57 4.7-2.57 5.03 0 5.96 3.31 5.96 7.61V24h-5v-8.5c0-2.03-.04-4.63-2.82-4.63-2.83 0-3.27 2.21-3.27 4.48V24h-5V8z"/></svg>
+              <span class="hero-social__label">LinkedIn</span>
+            </a>
+            <a href="https://github.com/mattwhispell" class="hero-social__link" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.19.69-3.86-1.54-3.86-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.2-3.09-.12-.3-.52-1.51.11-3.15 0 0 .98-.31 3.2 1.18a11.07 11.07 0 012.92-.39c.99.01 1.99.13 2.92.39 2.22-1.5 3.2-1.18 3.2-1.18.64 1.64.24 2.85.12 3.15.75.8 1.2 1.83 1.2 3.09 0 4.44-2.69 5.42-5.25 5.71.42.36.8 1.07.8 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+              <span class="hero-social__label">GitHub</span>
+            </a>
+          </div>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects &rarr;</a>
+            <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+          </div>
         </div>
-
-        <div class="hero__name-wrap">
-          <h1 class="hero__name">
-            Matt<br><em>Whispell</em>
-          </h1>
-          <img class="hero__portrait" src="images/Portrait.jpg" alt="Portrait of Matt Whispell">
-        </div>
-
-        <p class="hero__bio">
-          Third-year EE student with a focus on
-          <strong>controls systems</strong>, <strong>automation</strong>,
-          and <strong>electric vehicle powertrains</strong>. I build things that
-          move, sense, and self-correct — from motor controllers to feedback loops
-          that keep systems exactly where they need to be.
-        </p>
-
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">View Projects &rarr;</a>
-          <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
-        </div>
-
-      </div>
-    </section>
+      </section>
 
     <!-- ── Ticker ─────────────────────────────────────────── -->
     <div class="ticker" aria-hidden="true">
@@ -87,7 +96,7 @@
     <section id="projects">
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-header fade-in-up">
           <div>
             <p class="label">Selected Work</p>
             <h2>Projects</h2>
@@ -97,131 +106,63 @@
         <div class="projects-grid">
 
           <!-- Card 1 -->
-          <article class="project-card">
+          <a href="projects/3d-printer.html" class="project-card fade-in-up delay-1">
             <span class="project-card__num">01</span>
-            <h3 class="project-card__title">3D Printer Design and Build</h3>
+            <h3 class="project-card__title">3D Printer Design & Build</h3>
             <p class="project-card__desc">
-              Designed and built a coreXY 3D printer running on Klipper firmware that rivals the performance of top-level consumer models at less than half the price. 
-              This printer serves as a customizable platform for testing 3D printer performance improvements.
-
+              Designed and built a coreXY 3D printer running on Klipper firmware that rivals the performance of top-level consumer models at less than half the price.
             </p>
             <ul class="project-card__tags">
               <li class="tag">Embedded Systems</li>
               <li class="tag">Python</li>
               <li class="tag">Controls</li>
             </ul>
-            <details class="project-card__details">
-              <summary class="project-card__summary">View Details &rarr;</summary>
-              <div class="project-card__detail-panel">
-                <p>
-                  I implemented an ADXL345 accelerometer-based input shaping algorithm which avoids resonance peaks to reduce print artifacts and improve surface finish at high speeds. 
-                  The printer platform was also useful to analyze power consumption and thermal performance of the stepper drivers under various print loads, optimizing cooling to maintain consistent performance during long prints.
-                  To support high speed printer development, I designed a low cost CPAP cooling assembly using custom 3D printed parts to provide superior part cooling performance at high print speeds (orange 3D prints and gray vacuum hose in the image).
-               </p>
-                <div class="project-card__gallery">
-                  <img src="images/PrinterCAD.jpeg" alt="3D printer CAD design">
-                  <img src="images/PrinterReal.jpeg" alt="3D printer assembly">
-                </div>
-              </div>
-            </details>
-          </article>
+            <span class="project-card__action">Read Case Study &rarr;</span>
+          </a>
 
           <!-- Card 2 -->
-          <article class="project-card">
+          <a href="projects/electrochemical-sensor.html" class="project-card highlight fade-in-up delay-2">
             <span class="project-card__num">02</span>
             <h3 class="project-card__title">Electrochemical Sensor Research</h3>
             <p class="project-card__desc">
-              I'm currently working on a research project continuing development of an electrochemical sensor which matches the performance of commercial electrochemical sensors at a fraction of the cost using the LMP91000 IC.
+              Developing a low-cost electrochemical sensor utilizing the LMP91000 IC and Bluetooth connectivity to match commercial performance metrics.
             </p>
             <ul class="project-card__tags">
               <li class="tag">Simplicity Studio</li>
               <li class="tag">C, C++</li>
               <li class="tag">Electrochemistry</li>
-              <li class="tag">EFR32</li>
             </ul>
-            <details class="project-card__details">
-              <summary class="project-card__summary">View Details</summary>
-              <a class="project-card__github-link" href="https://github.com/sigmondkukla/lmp91000" target="_blank" rel="noopener" aria-label="GitHub repository">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.65 7.65 0 0 1 2.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-              <div class="project-card__detail-panel">
-                <p>Currently this sensor supports chronoamperometry, cyclic voltammetry, square wave voltammetry, and differential pulse voltammetry, but I plan to work with the chemistry team to expand its electrochemical experiment capabilities. 
-                  This sensor also implements bluetooth connectivity and a custom smartphone app to provide real-time feedback on sensor readings, which is a unique feature for this type of low-cost sensor. 
-                  Along with this, I hope to work on the PCB design and use an electromagnetic simulation software to implement an on board trace antenna to improve bluetooth performance, and to analyze effects of EMI on the experiment results. 
-                  We will work to finalize the design and begin looking into applications for the sensor such as glucose monitoring and environmental sensing, and I hope to publish our results in a journal paper by the end of the year.
-                </p>
-                <div class="project-card__gallery">
-                  <img src="images/ElectrochemicalSensor.jpg" alt="Electrochemical sensor custom PCB">
-                  <img src="images/LMP91000App.jpg" alt="Custom smartphone app showing real-time sensor data">
-                </div>
-              </div>
-            </details>
-          </article>
+            <span class="project-card__action">View Research &rarr;</span>
+          </a>
 
           <!-- Card 3 -->
-          <article class="project-card">
+          <a href="projects/formula-electric.html" class="project-card fade-in-up delay-1">
             <span class="project-card__num">03</span>
             <h3 class="project-card__title">Clarkson Formula Electric Team</h3>
             <p class="project-card__desc">
-              I created the program for the car's dashboard from scratch using an ESP32 microcontroller and a 3.2" TFT display, implementing CAN communication with vehicle systems to provide real-time feedback on performance metrics like speed, motor temperature, and faults.
+              Created the program for the car's dashboard from scratch using an ESP32 microcontroller and a TFT display, implementing real-time CAN communication.
             </p>
             <ul class="project-card__tags">
               <li class="tag">ESP32</li>
               <li class="tag">CAN</li>
               <li class="tag">TFT Display</li>
-              <li class="tag">Systems Integration</li>
-              <li class="tag">EV</li>
             </ul>
-            <details class="project-card__details">
-              <summary class="project-card__summary">View Details</summary>
-              <a class="project-card__github-link" href="https://github.com/mattwhispell/CFEK-Dash-V1" target="_blank" rel="noopener" aria-label="GitHub repository">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.65 7.65 0 0 1 2.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-              </a>
-              <div class="project-card__detail-panel">
-                <p>
-                  This dashboard provides critical real-time feedback to the driver during testing and competition, and has been a key part of our vehicle's performance and reliability improvements over the past year. 
-                  I ensured the dashboard's program was modular and well-documented to allow future team members to easily update and expand its functionality. 
-                  In addition to the dashboard, I also worked on the PCB assembly and testing to validate the design and ensure reliability.
-                  Next year I plan to contribute to the design and implementation of a custom battery pack to further improve our vehicle's performance and reliability.
-                </p>
-                <div class="project-card__gallery">
-                  <img src="images/Wheeldash.jpeg" alt="Dashboard program running outside of the steering wheel">
-                  <img src="images/Car.jpeg" alt="The car being worked on in the shop">
-                </div>
-              </div>
-            </details>
-          </article>
+            <span class="project-card__action">Read Case Study &rarr;</span>
+          </a>
 
-          <!-- Card 4 — placeholder -->
-          <article class="project-card">
+          <!-- Card 4 -->
+          <a href="projects/6502-computer.html" class="project-card fade-in-up delay-2">
             <span class="project-card__num">04</span>
-            <h3 class="project-card__title">My Upcoming Computer Engineering Project</h3>
+            <h3 class="project-card__title">6502 CPU Computer</h3>
             <p class="project-card__desc">
-              I am working on a project implementing a 6502 CPU based computer from the ground up. Eventually I plan to work my way up to running Wozmon and even MSBasic on this custom computer, but for now it's still in the early stages of development.
+              Implementing a 6502 CPU based computer from the ground up to explore computer architecture and low-level assembly language.
             </p>
             <ul class="project-card__tags">
               <li class="tag">Coming Soon</li>
-              <li class="tag">Computer Engineering</li>
               <li class="tag">Computer Architecture</li>
-              <li class="tag">Assembly Language</li>
             </ul>
-            <details class="project-card__details">
-              <summary class="project-card__summary">View Details</summary>
-              <div class="project-card__detail-panel">
-                <p>
-                  This project is still in development and research, but I have designed a custom EEPROM programmer to upload my program, and a clock circuit that uses 555 timers to generate an adjustable clock for debugging.
-                </p>
-                <div class="project-card__gallery">
-                  <img src="images/EEPROMProgrammer.jpeg" alt="EEPROM programmer for writing machine code to the EEPROM chip">
-                  <img src="images/ClockCircuit.jpeg" alt="Custom clock circuit using 555 timers to generate an adjustable clock signal for the 6502 CPU">
-                </div>
-              </div>
-            </details>
-          </article>
+            <span class="project-card__action">Read Case Study &rarr;</span>
+          </a>
 
         </div>
       </div>
@@ -238,18 +179,7 @@
             <h2>Engineer,<br>problem-solver,<br>tinkerer.</h2>
             <br>
             <p>
-              I'm a third-year Electrical Engineering student at Clarkson University in Potsdam, NY.
-              My coursework focuses on control systems and power electronics, and I spend a lot of
-              time outside class working on the Formula Electric team and circuit design projects.
-            </p>
-            <p>
-              My longer-term interest is in making electric vehicles smarter — better thermal
-              management, tighter torque control, and the kind of real-time feedback loops that
-              separate good EVs from great ones.
-            </p>
-            <p>
-              When I'm not in the lab I'm probably hiking the Adirondacks or taking something apart
-              to see how it works.
+              I'm a third-year Electrical Engineering student at Clarkson University in Potsdam, NY. My coursework focuses on control systems and power electronics, and I spend a lot of time outside class working on the Formula Electric team and circuit design projects. My longer-term interest is in making electric vehicles smarter — better thermal management, tighter torque control, and the kind of real-time feedback loops that separate good EVs from great ones. When I'm not in the lab I'm probably hiking the Adirondacks or taking something apart to see how it works.
             </p>
           </div>
 
@@ -318,31 +248,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const allDetails = document.querySelectorAll('.project-card__details');
-
-      allDetails.forEach(details => {
-        const card = details.closest('.project-card');
-        details.addEventListener('toggle', () => {
-          if (!card) return;
-
-          if (details.open) {
-            allDetails.forEach(other => {
-              if (other !== details) {
-                other.open = false;
-              }
-            });
-            card.classList.add('is-expanded');
-            window.requestAnimationFrame(() => {
-              card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-          } else {
-            card.classList.remove('is-expanded');
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
