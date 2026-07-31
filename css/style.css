@@ -218,8 +218,8 @@ section { padding-block: var(--section-gap); }
 
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
-  padding-block-start: calc(var(--nav-h) + 20px);
-  padding-block-end: 20px;
+  padding-block-start: calc(var(--nav-h) + 5px);
+  padding-block-end: 5px;
   min-height: auto;
   position: relative;
   overflow: hidden;
@@ -227,28 +227,58 @@ section { padding-block: var(--section-gap); }
 
 .hero .container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
   width: min(var(--max-w), 100% - 32px);
   margin-inline: auto;
 }
 
-/* Hero layout: content and image side by side on wider screens */
+/* Base: single column */
+.hero .container {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+/* Desktop layout: two columns, image spans full height */
 @media (min-width: 769px) {
   .hero .container {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 4rem;
+    grid-template-rows: auto auto auto;
+    gap: 2.5rem;
   }
+  .hero .name-wrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero .bio-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .hero .actions-social-wrapper {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .hero .hero__image {
+    grid-column: 2;
+    grid-row: 1 / 4; /* span all three rows */
+  }
+  .hero__bio {
+    margin-block-start: 0;
+  }
+  .hero .hero__image {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
-  .hero__content {
-    margin-block-end: 0;
-  }
-
-  .hero__image {
-    margin-block-end: 0;
-    align-self: start;
-  }
+/* Ensure wrappers are block level */
+.hero .name-wrapper,
+.hero .bio-wrapper,
+.hero .actions-social-wrapper {
+  display: block;
 }
 
 .hero::before {
@@ -289,13 +319,14 @@ section { padding-block: var(--section-gap); }
   font-size: clamp(44px, 7vw, 96px);
   margin-block-end: 0;
   max-width: 14ch;
+  text-align: center; 
 }
 
 .hero__portrait {
   width: 100%;
-  height: 65vh;          /* Increased from 50vh */
-  min-height: 350px;     /* Optional: raised min-height so it stays tall on mobile */
-  max-height: 850px;     /* Increased from 720px to allow extra height on large displays */
+  height: 40vh;          /* Increased from 50vh */
+  min-height: 300px;     /* Optional: raised min-height so it stays tall on mobile */
+  max-height: 550px;     /* Increased from 720px to allow extra height on large displays */
   object-fit: cover;
   border-radius: calc(var(--radius) * 3);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -872,38 +903,61 @@ section { padding-block: var(--section-gap); }
   }
 
   .hero {
-    padding-block-start: calc(var(--nav-h) + 40px);
+    padding-block-start: calc(var(--nav-h) + 5px);
+    padding-block-end: 5px;
     min-height: auto;
   }
 
-  .hero__name-wrap {
+  /* Stack hero content vertically on mobile: name, image, bio, actions-social */
+  .hero .container {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .hero .name-wrapper,
+  .hero .hero__image,
+  .hero .bio-wrapper,
+  .hero .actions-social-wrapper {
+    width: 100%;
+  }
+  .hero .hero__image {
+    display: flex;
+    justify-content: center;
+  }
+  .hero__portrait {
+    width: auto;
+    height: auto;
+    max-height: 135px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
   }
 
   .hero__name {
     font-size: clamp(40px, 10vw, 72px);
-    max-width: 100%;
-  }
-
-  .hero__portrait {
-    margin-left: 0;
-    width: 100%;
-    max-width: 280px;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
+    text-align: center;
+    justify-content: center;
   }
 
   .hero__eyebrow {
     font-size: 10px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero__bio {
     font-size: 14px;
     line-height: 1.7;
-    margin-block-end: 36px;
+    margin-block-end: 24px;
+    text-align: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero__actions {
+    justify-content: center;
   }
 
   .section-header {
