@@ -40,36 +40,38 @@
     <!-- ── Hero ──────────────────────────────────────────── -->
     <section class="hero" id="top">
         <div class="container">
-          <div class="hero__eyebrow">
-            <span class="label">Electrical Engineering · Clarkson University · 2028</span>
-          </div>
-          <div class="hero__name-wrap">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="label">Electrical Engineering · Clarkson University · 2028</span>
+            </div>
             <h1 class="hero__name">
               Matt<br><em>Whispell</em>
             </h1>
+            <p class="hero__bio">
+              Third-year EE student with a focus on
+              <strong>controls systems</strong>, <strong>automation</strong>,
+              and <strong>electric vehicle powertrains</strong>. I build things that
+              move, sense, and self-correct — from motor controllers to feedback loops
+              that keep systems exactly where they need to be.
+            </p>
+            <!-- Social icons row -->
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/matthewwhispell/" class="hero-social__link" aria-label="Connect on LinkedIn" target="_blank" rel="noopener">
+                <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.07c.66-1.25 2.28-2.57 4.7-2.57 5.03 0 5.96 3.31 5.96 7.61V24h-5v-8.5c0-2.03-.04-4.63-2.82-4.63-2.83 0-3.27 2.21-3.27 4.48V24h-5V8z"/></svg>
+                <span class="hero-social__label">LinkedIn</span>
+              </a>
+              <a href="https://github.com/mattwhispell" class="hero-social__link" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.19.69-3.86-1.54-3.86-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.2-3.09-.12-.3-.52-1.51.11-3.15 0 0 .98-.31 3.2 1.18a11.07 11.07 0 012.92-.39c.99.01 1.99.13 2.92.39 2.22-1.5 3.2-1.18 3.2-1.18.64 1.64.24 2.85.12 3.15.75.8 1.2 1.83 1.2 3.09 0 4.44-2.69 5.42-5.25 5.71.42.36.8 1.07.8 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+                <span class="hero-social__label">GitHub</span>
+              </a>
+            </div>
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">View Projects &rarr;</a>
+              <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero__image">
             <img class="hero__portrait" src="images/Portrait.jpg" alt="Portrait of Matt Whispell">
-          </div>
-          <p class="hero__bio">
-            Third-year EE student with a focus on
-            <strong>controls systems</strong>, <strong>automation</strong>,
-            and <strong>electric vehicle powertrains</strong>. I build things that
-            move, sense, and self-correct — from motor controllers to feedback loops
-            that keep systems exactly where they need to be.
-          </p>
-          <!-- Social icons row -->
-          <div class="hero-social">
-            <a href="https://www.linkedin.com/in/matthewwhispell/" class="hero-social__link" aria-label="Connect on LinkedIn" target="_blank" rel="noopener">
-              <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.07c.66-1.25 2.28-2.57 4.7-2.57 5.03 0 5.96 3.31 5.96 7.61V24h-5v-8.5c0-2.03-.04-4.63-2.82-4.63-2.83 0-3.27 2.21-3.27 4.48V24h-5V8z"/></svg>
-              <span class="hero-social__label">LinkedIn</span>
-            </a>
-            <a href="https://github.com/mattwhispell" class="hero-social__link" aria-label="GitHub" target="_blank" rel="noopener">
-              <svg class="hero-social__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.19.69-3.86-1.54-3.86-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.2-3.09-.12-.3-.52-1.51.11-3.15 0 0 .98-.31 3.2 1.18a11.07 11.07 0 012.92-.39c.99.01 1.99.13 2.92.39 2.22-1.5 3.2-1.18 3.2-1.18.64 1.64.24 2.85.12 3.15.75.8 1.2 1.83 1.2 3.09 0 4.44-2.69 5.42-5.25 5.71.42.36.8 1.07.8 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
-              <span class="hero-social__label">GitHub</span>
-            </a>
-          </div>
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">View Projects &rarr;</a>
-            <a href="#contact"  class="btn btn--ghost">Get in Touch</a>
           </div>
         </div>
       </section>
