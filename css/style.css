@@ -237,44 +237,23 @@ section { padding-block: var(--section-gap); }
   gap: 0;
 }
 
-/* Desktop layout: two columns, image spans full height */
-@media (min-width: 769px) {
-  .hero .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 2.5rem;
-  }
-  .hero .name-wrapper {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .hero .bio-wrapper {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .hero .actions-social-wrapper {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .hero .hero__image {
-    grid-column: 2;
-    grid-row: 1 / 4; /* span all three rows */
-  }
-  .hero__bio {
-    margin-block-start: 0;
-  }
-  .hero .hero__image {
-    width: 100%;
-    height: 100%;
-  }
-  .hero .hero__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+/* ── Hero Base (Mobile First) ────────────────────────────── */
+.hero {
+  padding-block-start: calc(var(--nav-h) + 5px);
+  padding-block-end: 5px;
+  min-height: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Ensure wrappers are block level */
+.hero .container {
+  display: grid;
+  width: min(var(--max-w), 100% - 32px);
+  margin-inline: auto;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
 .hero .name-wrapper,
 .hero .bio-wrapper,
 .hero .actions-social-wrapper {
@@ -295,6 +274,7 @@ section { padding-block: var(--section-gap); }
   margin-block-end: 20px;
   display: flex;
   align-items: center;
+  justify-content: center; /* Centered on mobile */
   gap: 12px;
 }
 
@@ -310,7 +290,7 @@ section { padding-block: var(--section-gap); }
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centered on mobile */
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -319,14 +299,14 @@ section { padding-block: var(--section-gap); }
   font-size: clamp(44px, 7vw, 96px);
   margin-block-end: 0;
   max-width: 14ch;
-  text-align: center; 
+  text-align: center; /* Centered on mobile */
 }
 
 .hero__portrait {
   width: 100%;
-  height: 40vh;          /* Increased from 50vh */
-  min-height: 300px;     /* Optional: raised min-height so it stays tall on mobile */
-  max-height: 550px;     /* Increased from 720px to allow extra height on large displays */
+  height: 40vh;
+  min-height: 300px;
+  max-height: 550px;
   object-fit: cover;
   border-radius: calc(var(--radius) * 3);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -357,13 +337,13 @@ section { padding-block: var(--section-gap); }
   align-items: center;
 }
 
-/* Social icon row in hero */
 .hero-social {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin: 1.5rem 0;
 }
+
 .hero-social__link {
   display: flex;
   align-items: center;
@@ -371,18 +351,75 @@ section { padding-block: var(--section-gap); }
   color: var(--text-muted);
   transition: color 0.2s ease;
 }
+
 .hero-social__icon {
   width: 1.2rem;
   height: 1.2rem;
   fill: currentColor;
 }
+
 .hero-social__label {
   margin-left: 0.4rem;
   font-size: 0.9rem;
   line-height: 1;
 }
+
 .hero-social__link:hover {
   color: var(--accent);
+}
+
+/* ── Desktop Overrides (Min-width 769px) ─────────────────── */
+@media (min-width: 769px) {
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2.5rem;
+  }
+
+  .hero .name-wrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero .bio-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hero .actions-social-wrapper {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .hero .hero__image {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero .hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__bio {
+    margin-block-start: 0;
+  }
+
+  /* Desktop Alignment Resets */
+  .hero__eyebrow {
+    justify-content: flex-start;
+  }
+
+  .hero__name-wrap {
+    justify-content: flex-start;
+  }
+
+  .hero__name {
+    text-align: left;
+  }
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
@@ -699,6 +736,7 @@ section { padding-block: var(--section-gap); }
   height: auto;
   display: block;
   border: 0;
+  aspect-ratio: 16 / 9;
 }
 
 /* Make images scalable */
