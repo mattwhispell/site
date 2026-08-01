@@ -593,11 +593,66 @@ section { padding-block: var(--section-gap); }
   -webkit-backdrop-filter: none;
 }
 
+.car-image-corner {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: clamp(12rem, 25vw, 18rem);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.car-image-corner img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s var(--ease-organic), box-shadow 0.3s var(--ease-organic);
+}
+
+.car-image-corner img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
 .project-hero {
   padding-block-start: calc(var(--nav-h) + 60px);
   padding-block-end: 80px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  position: relative;
+}
+
+.project-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.project-hero__content {
+  grid-column: 1;
+}
+
+.project-hero__image {
+  grid-column: 2;
+  align-self: start;
+}
+
+@media (max-width: 768px) {
+  .project-hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .project-hero__image {
+    grid-row: 2;
+    margin-top: 2rem;
+  }
+  .car-image-corner {
+    position: static;
+    margin: 2rem auto 0;
+    width: clamp(12rem, 60vw, 18rem);
+  }
 }
 
 .back-link {
