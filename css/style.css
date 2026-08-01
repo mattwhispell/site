@@ -598,6 +598,40 @@ section { padding-block: var(--section-gap); }
   padding-block-end: 80px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  position: relative;
+}
+
+.project-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.project-hero__content {
+  grid-column: 1;
+}
+
+.project-hero__image {
+  grid-column: 2;
+  align-self: start;
+  text-align: center;
+}
+
+.project-hero__image img {
+  width: auto;
+  height: 60vh;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .project-hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .project-hero__image {
+    grid-row: 2;
+    margin-top: 2rem;
+  }
 }
 
 .back-link {
