@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FloorLock Smart Access Control Hackathon Project by Matt Whispell" />
+  <title>FloorLock Smart Access Control — Matt Whispell</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Return home">
+        <img src="/favicon.svg" alt="Matt Whispell" style="width: 40px; height: 40px;">
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Project Hero ──────────────────────────────────────── -->
+    <section class="project-hero fade-in-up">
+      <div class="container project-hero__inner">
+        <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+        <div class="project-hero-row">
+          <div class="project-header">
+            <p class="label">Hackathon</p>
+            <h1 class="project-title">FloorLock Smart Access Control</h1>
+            <p class="project-lead">
+              Built a smart elevator access control system during a hackathon that restricts floor selection to authorized users via an admin-managed backend running on ESP32 microcontrollers.
+            </p>
+
+            <ul class="project-card__tags">
+              <li class="tag">ESP32</li>
+              <li class="tag">WiFi</li>
+              <li class="tag">Full-Stack</li>
+              <li class="tag">Embedded C++</li>
+            </ul>
+
+            <div class="project-links mt-4">
+              <a class="btn btn--primary" href="https://github.com/jmmire1/Floorlock" target="_blank" rel="noopener">
+                View on GitHub &nearr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-hero-image">
+            <img src="../images/elevatorpanelhackathon.png" alt="Elevator-style access control panel with button array and LCD display showing FloorLock in action" loading="lazy">
+            <figcaption>Physical hardware build — elevator-style access control panel with button array and LCD display</figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Project Content ────────────────────────────────────── -->
+    <section class="project-content fade-in-up delay-1">
+      <div class="container">
+
+        <div class="project-grid">
+          <div class="project-text">
+            <h2>System Overview</h2>
+            <p>
+              FloorLock is a smart access control system designed and built during a hackathon in partnership with Zachary Thornton. The system uses ESP32 microcontrollers to create a fully self-contained access control network — one ESP32 acts as a central host that creates its own WiFi network, checks key requests against an access database, logs all events, and serves a web-based admin interface at 192.168.4.1. Additional ESP32 nodes function as door or elevator panel readers that grant or deny floor access based on the host's authorization decisions.
+            </p>
+            <p>
+              The entire system is fully isolated and self-hosted — no external internet connection is required. The host ESP32 serves the admin panel as a web page over its own WiFi network, allowing building managers to add or revoke keycards, view access logs, and manage floor permissions from any browser-connected device within range.
+            </p>
+
+            <h2>Technical Architecture</h2>
+            <p>
+              Built using PlatformIO and the Arduino framework, the firmware leverages the ESP32's dual-core processor to handle concurrent Wi-Fi client connections, SPIFFS file system operations, and real-time access control logic. The web interface uses LittleFS to serve static assets and provides a responsive admin dashboard for managing users, tracking access events, and configuring per-floor permissions. Each door ESP32 communicates with the host over the local Wi-Fi network using a lightweight custom protocol.
+            </p>
+            <p>
+              The hardware is built around an elevator-style button panel and an LCD display that provides immediate feedback to users — a green indicator for authorized access and red for denied attempts. The admin panel runs in a browser and shows a clean console layout with real-time event logging.
+            </p>
+          </div>
+
+          <div class="project-gallery-stack">
+            <figure class="gallery-item">
+              <img src="../images/elevatorpanelhackathon.png" alt="Elevator-style access control panel with button array and LCD display" loading="lazy">
+              <figcaption>Elevator-style access control panel with button array and LCD display</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="../images/adminpanelhackathon.png" alt="Web-based admin panel showing real-time access logs and floor management" loading="lazy">
+              <figcaption>Web-based admin panel showing real-time access logs and floor management</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Documentation -->
+        <div class="project-documents mt-5">
+          <h2>Documentation</h2>
+          <p>Below you can view the detailed project documentation.</p>
+
+          <div class="document-viewer">
+            <h3>Project Report</h3>
+            <object data="../images/FloorLock%20Smart%20Access%20Control.pdf" type="application/pdf" width="100%" height="800px" class="pdf-object">
+              <p>It appears you don't have a PDF plugin for this browser. <a href="../images/FloorLock%20Smart%20Access%20Control.pdf">Click here to download the report.</a></p>
+            </object>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025 Matt Whispell</span>
+      <nav aria-label="Social links">
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/matthewwhispell/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/mattwhispell" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
