@@ -615,6 +615,13 @@ section { padding-block: var(--section-gap); }
 .project-hero__image {
   grid-column: 2;
   align-self: start;
+  text-align: center;
+}
+
+.project-hero__image img {
+  width: auto;
+  height: 60vh;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
