@@ -615,7 +615,38 @@ section { padding-block: var(--section-gap); }
 }
 
 .project-header {
-  max-width: 800px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Hero glamour-shot row ──────────────────────────────── */
+.project-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.project-hero-image {
+  flex-shrink: 0;
+  max-width: 420px;
+  width: 100%;
+}
+
+.project-hero-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid var(--border);
+}
+
+.project-hero-image figcaption {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  text-align: center;
 }
 
 .project-title {
@@ -974,6 +1005,17 @@ section { padding-block: var(--section-gap); }
   .project-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .project-hero-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .project-hero-image {
+    max-width: 100%;
   }
 
   .about-grid {
