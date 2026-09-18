@@ -668,6 +668,26 @@ section { padding-block: var(--section-gap); }
   margin-block-end: 32px;
 }
 
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-block: 12px 8px;
+}
+
+.status-badge__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ghost);
+}
+
 .project-content {
   padding-block: 80px;
 }
@@ -686,6 +706,16 @@ section { padding-block: var(--section-gap); }
   color: var(--text);
 }
 .project-text h2:first-child {
+  margin-block-start: 0;
+}
+
+.project-text h3 {
+  font-size: 19px;
+  margin-block-start: 32px;
+  margin-block-end: 12px;
+  color: var(--text);
+}
+.project-text h3:first-child {
   margin-block-start: 0;
 }
 
@@ -753,6 +783,26 @@ section { padding-block: var(--section-gap); }
   text-align: center;
 }
 
+.feature-image {
+  width: 100%;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: 64px;
+}
+
 .document-viewer {
   background: var(--surface);
   padding: 24px;
@@ -813,6 +863,45 @@ section { padding-block: var(--section-gap); }
 .detail-row:first-child { border-top: 1px solid var(--border); }
 .detail-row dt { color: var(--text-muted); }
 .detail-row dd { color: var(--text); }
+
+/* ── Feature Band (Formula Electric spotlight) ──────────── */
+.feature-band {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 64px;
+}
+
+.feature-band__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.feature-band__text h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  margin-block: 12px 16px;
+}
+
+.feature-band__text p {
+  color: var(--text-sub);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-block-end: 28px;
+}
+
+.feature-band__image {
+  border-radius: calc(var(--radius) * 2);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.feature-band__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* ── Contact ─────────────────────────────────────────────── */
 .contact-band {
@@ -1017,6 +1106,15 @@ section { padding-block: var(--section-gap); }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .feature-band__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature-band__image {
+    order: -1;
   }
 
   .footer__inner {

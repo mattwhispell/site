@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Configurable USB-C Breadboard Power Supply PCB by Matt Whispell" />
+  <title>USB-C Breadboard Power Supply — Matt Whispell</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="project-page">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Return home">
+        <img src="/favicon.svg" alt="Matt Whispell" style="width: 40px; height: 40px;">
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../formula-electric.html">Formula Electric</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Project Hero ──────────────────────────────────────── -->
+    <section class="project-hero fade-in-up">
+      <div class="container project-hero__inner">
+        <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+        <div class="project-hero-row">
+          <div class="project-header">
+            <p class="label">PCB Design</p>
+            <h1 class="project-title">USB-C Breadboard Power Supply</h1>
+            <p class="project-lead">
+              Designed a compact power supply PCB that takes a USB-C input and lets each breadboard rail be independently set to 3.3V, 5V, or 12V.
+            </p>
+
+            <ul class="project-card__tags">
+              <li class="tag">Altium Designer</li>
+              <li class="tag">PCB Design</li>
+              <li class="tag">Power Electronics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Project Content ────────────────────────────────────── -->
+    <section class="project-content fade-in-up delay-1">
+      <div class="container">
+
+        <div class="project-grid">
+          <div class="project-text">
+            <h2>Circuit Overview</h2>
+            <p>
+              The board takes a standard USB-C connector as its only input and generates every voltage a breadboard project typically needs. A boost converter steps the 5V USB input up to 12V, while a linear regulator drops it down to a clean 3.3V rail. Combined with the unregulated 5V straight off USB-C, that gives three available voltages on board at once.
+            </p>
+            <p>
+              Each of the board's breadboard-facing rails has its own jumper selector, so every rail can be independently configured to output 3.3V, 5V, or 12V depending on what a given project needs — no separate bench supply or voltage regulator breakout required.
+            </p>
+
+            <h2>Design Process</h2>
+            <p>
+              This project took me through the full PCB design workflow in Altium Designer, start to finish. I began by specing components — picking a boost converter IC and inductor rated for the current and ripple targets I wanted, choosing a linear regulator for the 3.3V rail, and selecting a USB-C receptacle and protection components suited to the input. From there I moved into schematic capture, wiring up the power stages and jumper-selectable rail logic, then into board layout, where I worked through component placement, copper pour, and trace routing for the power paths.
+            </p>
+            <p>
+              After fabrication, I hand-assembled the board, soldering both through-hole and surface-mount components, then brought it up and tested each rail under load to confirm the boost and linear regulator stages met their target voltages and the jumper selection behaved correctly across all three settings. End to end, it was a hands-on introduction to the tradeoffs involved in turning a schematic into a working, physical power supply.
+            </p>
+          </div>
+
+          <div class="project-gallery-stack">
+            <figure class="gallery-item">
+              <img src="../images/panko/PankoLayout.png" alt="PCB layout in Altium Designer showing the boost converter, linear regulator, and selectable rail headers" loading="lazy">
+              <figcaption>PCB layout in Altium Designer showing the power stages and per-rail selector headers</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="../images/panko/PankoReal.jpg" alt="Assembled power supply board mounted on a breadboard" loading="lazy">
+              <figcaption>Assembled board mounted on a breadboard, powering each rail from USB-C</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; 2025 Matt Whispell</span>
+      <nav aria-label="Social links">
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/matthewwhispell/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/mattwhispell" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
